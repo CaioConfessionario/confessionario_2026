@@ -194,23 +194,33 @@ nav.scrolled .nav-cta:hover{background:var(--black);color:#fff;}
 
 
 /* SERVICES */
-.services{background:#F4F3F0;padding:64px 48px 80px;border-bottom:0.5px solid var(--border);}
-.sec-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:56px;}
+.services{background:#EEECEA;padding:64px 48px 80px;border-bottom:0.5px solid var(--border);}
+.sec-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
 .sec-label{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);}
 .sec-tag{font-size:11px;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;}
-.svc-item{border-top:0.5px solid var(--border);display:grid;grid-template-columns:48px minmax(0,1.2fr) minmax(0,1.4fr) 160px;align-items:center;column-gap:32px;padding:28px 0;cursor:none;transition:background 0.35s ease;}
-.svc-item:last-child{border-bottom:0.5px solid var(--border);}
-.svc-item:hover{background:rgba(0,0,0,0.02);}
-.svc-num{font-family:'Unbounded',sans-serif;font-size:11px;font-weight:200;color:#9B9A96;}
-.svc-name{font-family:'Unbounded',sans-serif;font-size:clamp(18px,2vw,26px);font-weight:400;color:var(--black);line-height:1.15;transition:opacity 0.35s ease,transform 0.4s cubic-bezier(0.16,1,0.3,1);}
-.svc-item:hover .svc-name{opacity:0.4;transform:translateX(6px);}
-.svc-desc{font-size:18px;font-weight:300;color:#9B9A96;line-height:1.65;transition:color 0.35s ease,transform 0.4s cubic-bezier(0.16,1,0.3,1);}
-.svc-item:hover .svc-desc{color:var(--black);transform:translateX(4px);}
-.svc-cta{display:flex;align-items:center;justify-content:flex-end;gap:10px;opacity:0;transform:translateX(-10px);transition:opacity 0.35s ease,transform 0.4s cubic-bezier(0.16,1,0.3,1);}
-.svc-item:hover .svc-cta{opacity:1;transform:translateX(0);}
-.svc-cta-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--black);white-space:nowrap;}
-.svc-cta-btn{width:30px;height:30px;border-radius:50%;border:0.5px solid var(--black);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--black);flex-shrink:0;transition:background 0.2s,color 0.2s;}
-.svc-item:hover .svc-cta-btn{background:var(--black);color:#F4F3F0;}
+.cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.card{background:#F7F6F3;border-radius:3px;padding:40px 36px 36px;position:relative;overflow:hidden;cursor:none;display:flex;flex-direction:column;transition:background 0.4s ease;}
+.card:hover{background:#ffffff;}
+.card:nth-child(1){min-height:340px;}
+.card:nth-child(2){min-height:260px;}
+.card:nth-child(3){min-height:280px;}
+.card:nth-child(4){min-height:320px;}
+.card:nth-child(5){min-height:300px;}
+.card:nth-child(6){min-height:260px;}
+.card-corner{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 44px 44px 0;border-color:transparent #EEECEA transparent transparent;opacity:0;transition:opacity 0.3s;z-index:2;}
+.card:hover .card-corner{opacity:1;}
+.card-corner-arrow{position:absolute;top:8px;right:8px;font-size:13px;opacity:0;transition:opacity 0.3s;z-index:3;color:var(--black);}
+.card:hover .card-corner-arrow{opacity:1;}
+.card-icon{margin-bottom:auto;padding-bottom:48px;opacity:0.45;transition:opacity 0.3s;}
+.card:hover .card-icon{opacity:0.8;}
+.card-icon svg{fill:none;stroke:#111110;}
+.card-name{font-family:'Unbounded',sans-serif;font-weight:400;font-size:clamp(15px,1.6vw,20px);color:#111110;margin-bottom:12px;line-height:1.2;}
+.card-desc{font-family:'Inter',sans-serif;font-size:13px;font-weight:300;color:#6B6A66;line-height:1.7;transition:color 0.3s;}
+.card:hover .card-desc{color:#444441;}
+.card-cta{display:flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;color:#9B9A96;transition:color 0.3s;}
+.card:hover .card-cta{color:#111110;}
+.card-cta-circle{width:24px;height:24px;border-radius:50%;border:0.5px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;transition:background 0.25s,color 0.25s;}
+.card:hover .card-cta-circle{background:#111110;color:#fff;}
 
 /* PORTFOLIO SLIDER */
 .portfolio{
@@ -612,12 +622,69 @@ footer{background:var(--black);color:var(--white);}
     <span class="sec-label">Serviços</span>
     <span class="sec-tag">Ativos Estratégicos</span>
   </div>
-  <div class="svc-item"><span class="svc-num">01</span><span class="svc-name">Design Estratégico</span><span class="svc-desc">Sistemas visuais que comunicam posicionamento e geram valor percebido para marcas que querem crescer com consistência.</span><div class="svc-cta"><span class="svc-cta-label">Ver ativo</span><span class="svc-cta-btn">↗</span></div></div>
-  <div class="svc-item"><span class="svc-num">02</span><span class="svc-name">Arquitetura Comercial e Corporativa</span><span class="svc-desc">Projetos de espaços que traduzem a identidade da marca no ambiente físico, do conceito à entrega.</span><div class="svc-cta"><span class="svc-cta-label">Ver ativo</span><span class="svc-cta-btn">↗</span></div></div>
-  <div class="svc-item"><span class="svc-num">03</span><span class="svc-name">Design de Embalagem</span><span class="svc-desc">Rótulos e estruturas que comunicam valor e vendem antes mesmo de serem abertos.</span><div class="svc-cta"><span class="svc-cta-label">Ver ativo</span><span class="svc-cta-btn">↗</span></div></div>
-  <div class="svc-item"><span class="svc-num">04</span><span class="svc-name">Naming</span><span class="svc-desc">Criação de nomes com contexto, fonética e conexão real com o mercado e o público.</span><div class="svc-cta"><span class="svc-cta-label">Ver ativo</span><span class="svc-cta-btn">↗</span></div></div>
-  <div class="svc-item"><span class="svc-num">05</span><span class="svc-name">WebDesign</span><span class="svc-desc">Interfaces digitais que convertem, engajam e refletem a identidade da marca com precisão.</span><div class="svc-cta"><span class="svc-cta-label">Ver ativo</span><span class="svc-cta-btn">↗</span></div></div>
-  <div class="svc-item"><span class="svc-num">06</span><span class="svc-name">Consultoria e Estratégia</span><span class="svc-desc">Diagnóstico e direcionamento para marcas em momento de transformação ou crescimento.</span><div class="svc-cta"><span class="svc-cta-label">Ver ativo</span><span class="svc-cta-btn">↗</span></div></div>
+  <div class="cards-grid">
+
+    <div class="card">
+      <div class="card-corner"></div><span class="card-corner-arrow">↗</span>
+      <div class="card-icon">
+        <svg width="52" height="52" viewBox="0 0 52 52" stroke-width="0.9"><circle cx="26" cy="26" r="20"/><path d="M6 26 Q16 10 26 26 Q36 42 46 26"/><line x1="26" y1="6" x2="26" y2="46"/></svg>
+      </div>
+      <div class="card-name">Design Estratégico</div>
+      <div class="card-desc">Sistemas visuais que comunicam posicionamento e geram valor percebido para marcas que querem crescer com consistência.</div>
+      <div class="card-cta">Ver ativo<span class="card-cta-circle">↗</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-corner"></div><span class="card-corner-arrow">↗</span>
+      <div class="card-icon">
+        <svg width="44" height="44" viewBox="0 0 44 44" stroke-width="0.9"><rect x="4" y="4" width="36" height="36"/><rect x="14" y="14" width="16" height="16"/><line x1="4" y1="4" x2="14" y2="14"/><line x1="40" y1="4" x2="30" y2="14"/><line x1="4" y1="40" x2="14" y2="30"/><line x1="40" y1="40" x2="30" y2="30"/></svg>
+      </div>
+      <div class="card-name">Arquitetura Comercial e Corporativa</div>
+      <div class="card-desc">Projetos de espaços que traduzem a identidade da marca no ambiente físico, do conceito à entrega.</div>
+      <div class="card-cta">Ver ativo<span class="card-cta-circle">↗</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-corner"></div><span class="card-corner-arrow">↗</span>
+      <div class="card-icon">
+        <svg width="38" height="56" viewBox="0 0 38 56" stroke-width="0.9"><ellipse cx="19" cy="19" rx="15" ry="15"/><ellipse cx="19" cy="19" rx="7" ry="7"/><line x1="19" y1="34" x2="19" y2="48"/><line x1="7" y1="48" x2="31" y2="48"/></svg>
+      </div>
+      <div class="card-name">Design de Embalagem</div>
+      <div class="card-desc">Rótulos e estruturas que comunicam valor e vendem antes mesmo de serem abertos.</div>
+      <div class="card-cta">Ver ativo<span class="card-cta-circle">↗</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-corner"></div><span class="card-corner-arrow">↗</span>
+      <div class="card-icon">
+        <svg width="58" height="40" viewBox="0 0 58 40" stroke-width="0.9"><path d="M4 30 Q14 4 29 4 Q44 4 54 30"/><path d="M12 30 Q18 14 29 14 Q40 14 46 30"/><line x1="4" y1="36" x2="54" y2="36"/></svg>
+      </div>
+      <div class="card-name">Naming</div>
+      <div class="card-desc">Criação de nomes com contexto, fonética e conexão real com o mercado e o público.</div>
+      <div class="card-cta">Ver ativo<span class="card-cta-circle">↗</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-corner"></div><span class="card-corner-arrow">↗</span>
+      <div class="card-icon">
+        <svg width="56" height="44" viewBox="0 0 56 44" stroke-width="0.9"><rect x="4" y="4" width="48" height="30" rx="2"/><line x1="4" y1="12" x2="52" y2="12"/><line x1="12" y1="20" x2="32" y2="20"/><line x1="12" y1="26" x2="26" y2="26"/><line x1="28" y1="34" x2="28" y2="40"/><line x1="16" y1="40" x2="40" y2="40"/></svg>
+      </div>
+      <div class="card-name">WebDesign</div>
+      <div class="card-desc">Interfaces digitais que convertem, engajam e refletem a identidade da marca com precisão.</div>
+      <div class="card-cta">Ver ativo<span class="card-cta-circle">↗</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-corner"></div><span class="card-corner-arrow">↗</span>
+      <div class="card-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" stroke-width="0.9"><line x1="24" y1="4" x2="24" y2="44"/><line x1="4" y1="24" x2="44" y2="24"/><line x1="7" y1="7" x2="41" y2="41"/><line x1="41" y1="7" x2="7" y2="41"/><circle cx="24" cy="24" r="5"/></svg>
+      </div>
+      <div class="card-name">Consultoria e Estratégia</div>
+      <div class="card-desc">Diagnóstico e direcionamento para marcas em momento de transformação ou crescimento.</div>
+      <div class="card-cta">Ver ativo<span class="card-cta-circle">↗</span></div>
+    </div>
+
+  </div>
 </section>
 
 <!-- STATS -->
