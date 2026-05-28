@@ -203,17 +203,28 @@ nav.scrolled .nav-cta:hover{background:var(--black);color:#fff;}
 .sec-label{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);}
 .sec-count{font-size:11px;color:var(--text-muted);}
 .svc-row{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:20px 0;border-top:0.5px solid var(--border);cursor:none;
+  display:flex;align-items:center;
+  padding:24px 0;border-top:0.5px solid var(--border);cursor:none;
   transition:padding-left 0.35s var(--ease);
 }
-.svc-row:hover{padding-left:14px;}
+.svc-row:hover{padding-left:12px;}
 .svc-row:last-child{border-bottom:0.5px solid var(--border);}
-.svc-num{font-family:'Inter',sans-serif;font-size:11px;font-weight:200;color:var(--text-muted);width:36px;flex-shrink:0;}
-.svc-name{font-family:'Inter',sans-serif;font-size:18px;font-weight:400;flex:1;padding-left:20px;transition:opacity 0.2s;}
-.svc-row:hover .svc-name{opacity:0.6;}
-.svc-desc{font-size:12px;color:var(--text-muted);max-width:220px;text-align:right;line-height:1.5;}
-.svc-arrow{font-size:18px;color:var(--text-muted);margin-left:20px;flex-shrink:0;}
+.svc-num{
+  font-family:'Unbounded',sans-serif;font-size:11px;font-weight:200;
+  color:var(--text-muted);width:48px;flex-shrink:0;
+}
+.svc-name{
+  font-family:'Unbounded',sans-serif;font-size:22px;font-weight:400;
+  flex:1;transition:opacity 0.35s ease;
+}
+.svc-row:hover .svc-name{opacity:0.5;}
+.svc-desc{
+  font-size:12px;color:var(--text-muted);max-width:260px;text-align:right;
+  line-height:1.55;margin-right:24px;
+  opacity:0;transition:opacity 0.35s ease;
+}
+.svc-row:hover .svc-desc{opacity:1;}
+.svc-arrow{font-size:16px;color:var(--text-muted);flex-shrink:0;}
 
 /* PORTFOLIO SLIDER */
 .portfolio{
@@ -504,7 +515,7 @@ footer{background:var(--black);color:var(--white);}
     <div class="sw-track-container">
       <div class="sw-track" id="swTrack">
 
-        <article class="sw-card sw-card--1" data-href="/projetos/boro">
+        <article class="sw-card sw-card--1">
           <div class="sw-card__placeholder"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="8" width="28" height="20" rx="2" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="12" cy="15" r="3" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><path d="M4 24l7-6 5 4 5-5 11 7" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/></svg><span class="sw-card__placeholder-label">Foto do projeto</span></div>
           <div class="sw-card__overlay"></div>
           <div class="sw-card__tags">Branding, Arquitetura Comercial</div>
@@ -516,7 +527,7 @@ footer{background:var(--black);color:var(--white);}
           </div>
         </article>
 
-        <article class="sw-card sw-card--2" data-href="/projetos/uaubox">
+        <article class="sw-card sw-card--2">
           <div class="sw-card__placeholder"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="8" width="28" height="20" rx="2" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="12" cy="15" r="3" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><path d="M4 24l7-6 5 4 5-5 11 7" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/></svg><span class="sw-card__placeholder-label">Foto do projeto</span></div>
           <div class="sw-card__overlay"></div>
           <div class="sw-card__tags">Rebrand, Identidade Visual, Embalagem</div>
@@ -528,7 +539,7 @@ footer{background:var(--black);color:var(--white);}
           </div>
         </article>
 
-        <article class="sw-card sw-card--3" data-href="/projetos/audcorp">
+        <article class="sw-card sw-card--3">
           <div class="sw-card__placeholder"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="8" width="28" height="20" rx="2" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="12" cy="15" r="3" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><path d="M4 24l7-6 5 4 5-5 11 7" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/></svg><span class="sw-card__placeholder-label">Foto do projeto</span></div>
           <div class="sw-card__overlay"></div>
           <div class="sw-card__tags">Arquitetura Comercial, Interiores</div>
@@ -540,7 +551,7 @@ footer{background:var(--black);color:var(--white);}
           </div>
         </article>
 
-        <article class="sw-card sw-card--4" data-href="/projetos/flora">
+        <article class="sw-card sw-card--4">
           <div class="sw-card__placeholder"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="8" width="28" height="20" rx="2" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="12" cy="15" r="3" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><path d="M4 24l7-6 5 4 5-5 11 7" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/></svg><span class="sw-card__placeholder-label">Foto do projeto</span></div>
           <div class="sw-card__overlay"></div>
           <div class="sw-card__tags">Naming, Branding, Embalagem</div>
@@ -613,13 +624,14 @@ footer{background:var(--black);color:var(--white);}
 <section class="services">
   <div class="sec-head reveal">
     <span class="sec-label">Serviços</span>
-    <span class="sec-count">05 disciplinas</span>
+    <span class="sec-count">06 disciplinas</span>
   </div>
-  <div class="svc-row reveal"><span class="svc-num">01</span><span class="svc-name">Identidade Visual</span><span class="svc-desc">Marca, logotipo, sistema visual e ativos</span><span class="svc-arrow">↗</span></div>
-  <div class="svc-row reveal d1"><span class="svc-num">02</span><span class="svc-name">Arquitetura Comercial</span><span class="svc-desc">Projeto e consultoria de espaços comerciais</span><span class="svc-arrow">↗</span></div>
-  <div class="svc-row reveal d2"><span class="svc-num">03</span><span class="svc-name">Design de Embalagem</span><span class="svc-desc">Rótulos, estrutura e sistema de embalagem</span><span class="svc-arrow">↗</span></div>
-  <div class="svc-row reveal d3"><span class="svc-num">04</span><span class="svc-name">Naming & Estratégia</span><span class="svc-desc">Criação de nomes com contexto e conexão</span><span class="svc-arrow">↗</span></div>
-  <div class="svc-row reveal"><span class="svc-num">05</span><span class="svc-name">Design Digital</span><span class="svc-desc">Webdesign para pontos de contato digitais</span><span class="svc-arrow">↗</span></div>
+  <div class="svc-row reveal"><span class="svc-num">01</span><span class="svc-name">Design Estratégico</span><span class="svc-desc">Sistemas visuais que comunicam posicionamento e geram valor percebido</span><span class="svc-arrow">↗</span></div>
+  <div class="svc-row reveal d1"><span class="svc-num">02</span><span class="svc-name">Arquitetura Comercial e Corporativa</span><span class="svc-desc">Projetos de espaços que traduzem a marca no ambiente físico</span><span class="svc-arrow">↗</span></div>
+  <div class="svc-row reveal d2"><span class="svc-num">03</span><span class="svc-name">Design de Embalagem</span><span class="svc-desc">Rótulos e estruturas que vendem antes mesmo de serem abertos</span><span class="svc-arrow">↗</span></div>
+  <div class="svc-row reveal d3"><span class="svc-num">04</span><span class="svc-name">Naming</span><span class="svc-desc">Criação de nomes com contexto, fonética e conexão com o mercado</span><span class="svc-arrow">↗</span></div>
+  <div class="svc-row reveal"><span class="svc-num">05</span><span class="svc-name">WebDesign</span><span class="svc-desc">Interfaces digitais que convertem e refletem a identidade da marca</span><span class="svc-arrow">↗</span></div>
+  <div class="svc-row reveal d1"><span class="svc-num">06</span><span class="svc-name">Consultoria e Estratégia</span><span class="svc-desc">Diagnóstico e direcionamento para marcas em transformação</span><span class="svc-arrow">↗</span></div>
 </section>
 
 <!-- STATS -->
@@ -805,11 +817,6 @@ window.addEventListener('load',()=>{
 
   btnPrev.addEventListener('click',()=>goTo(current-1));
   btnNext.addEventListener('click',()=>goTo(current+1));
-  cards.forEach(card=>{
-    card.addEventListener('click',function(){
-      if(this.dataset.href)window.location.href=this.dataset.href;
-    });
-  });
   document.addEventListener('keydown',e=>{
     if(e.key==='ArrowLeft')goTo(current-1);
     if(e.key==='ArrowRight')goTo(current+1);
